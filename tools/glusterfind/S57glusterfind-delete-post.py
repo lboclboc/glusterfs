@@ -23,7 +23,7 @@ def get_glusterd_workdir():
     out, _ = p.communicate()
 
     if p.returncode == 0:
-        return out.strip()
+        return out.decode().strip()
     else:
         return DEFAULT_GLUSTERD_WORKDIR
 
